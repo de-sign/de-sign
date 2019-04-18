@@ -1,0 +1,32 @@
+{
+  "name": "one-page-starter",
+  "version": "0.1.0",
+  "description": "Simple one-page layout website starter pack",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/de-sign/one-page-starter.git"
+  },
+  "author": "Jérémy OUDOT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/de-sign/one-page-starter/issues"
+  },
+  "homepage": "https://github.com/de-sign/one-page-starter#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^4.1.0",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-nunjucks": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "uikit": "^3.1.0"
+  }
+}
