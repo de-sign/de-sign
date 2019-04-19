@@ -36,7 +36,7 @@ Object.assign(exports, {
             fonts: '**/*.*'
         },
         src: {
-            html: '**/*.html',
+            html: '*.html',
             scss: 'main.scss',
             js: '**/*.js',
             images: '**/*.*',

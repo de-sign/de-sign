@@ -1,0 +1,21 @@
+<!doctype {{US.doctype}}>
+<html lang="{{US.lang}}" class="no-js">
+
+	<head>
+		{% include 'template/base/head.html' %}
+	</head>
+	
+	<body>
+		{% block header %}
+			{% include 'template/layout/header.html' %}
+		{% endblock %}
+
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+
+		{% block footer %}
+			{% include 'template/layout/footer.html' %}
+		{% endblock %}
+	</body>
+</html>

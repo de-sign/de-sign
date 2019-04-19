@@ -2,6 +2,7 @@
 const gulp          = require('gulp');
 const del           = require('del');
 const plumber       = require('gulp-plumber');
+const nunjucks      = require('gulp-nunjucks');
 const sourcemaps    = require('gulp-sourcemaps');
 const concat        = require('gulp-concat');
 const uglify        = require('gulp-uglify');
@@ -20,6 +21,9 @@ module.exports = function(config){
         
         html: () => {
             return gulp.src(config.paths.src.html + '/' + config.files.src.html)
+                .pipe(plumber())
+                .pipe(nunjucks.compile())
+                .pipe(plumber.stop())
                 .pipe(gulp.dest(config.paths.dest.html));
         },
 
