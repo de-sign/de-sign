@@ -29,7 +29,10 @@ Object.assign(exports, {
 
     files: {
         watch: {
-            html: '**/*.html',
+            html: [
+                '**/*.html',
+                '**/*.json'
+            ],
             scss: '**/*.scss',
             js: '**/*.js',
             images: '**/*.*',
