@@ -15,8 +15,8 @@ module.exports = function(config, _builds){
         },
         
         watch: (done) => {
-            for( let task in config.files){
-                gulp.watch(config.paths.src[task] + '/' + config.files[task], gulp.series(_builds[task]));
+            for( let task in config.files.watch){
+                gulp.watch(config.paths.src[task] + '/' + config.files.watch[task], gulp.series(_builds[task]));
             };
             done();
         }

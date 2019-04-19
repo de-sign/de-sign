@@ -28,10 +28,23 @@ Object.assign(exports, {
     },
 
     files: {
-        html: '**/*.html',
-        scss: '**/*.scss',
-        js: '**/*.js',
-        images: '**/*.*',
-        fonts: '**/*.*'
+        watch: {
+            html: '**/*.html',
+            scss: '**/*.scss',
+            js: '**/*.js',
+            images: '**/*.*',
+            fonts: '**/*.*'
+        },
+        src: {
+            html: '**/*.html',
+            scss: 'main.scss',
+            js: '**/*.js',
+            images: '**/*.*',
+            fonts: '**/*.*'
+        },
+        dest: {
+            js: 'main.js',
+            scss: 'main.css'
+        }
     }
 });

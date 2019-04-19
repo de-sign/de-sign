@@ -1,17 +1,17 @@
 {
-  "name": "one-page-starter",
-  "version": "0.1.0",
-  "description": "Simple one-page layout website starter pack",
+  "name": "uikit-starter",
+  "version": "0.2.0",
+  "description": "Simple uikit website starter pack",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/de-sign/one-page-starter.git"
+    "url": "git+https://github.com/de-sign/uikit-starter.git"
   },
   "author": "Jérémy OUDOT",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/de-sign/one-page-starter/issues"
+    "url": "https://github.com/de-sign/uikit-starter/issues"
   },
-  "homepage": "https://github.com/de-sign/one-page-starter#readme",
+  "homepage": "https://github.com/de-sign/uikit-starter#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^4.1.0",

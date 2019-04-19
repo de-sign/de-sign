@@ -1,7 +1,6 @@
-# Simple one-page layout website stater pack
+# Simple uikit website starter pack
 
-## ToDo List
-[x] Make Gulp work
-[ ] Made SCSS structure files
-[ ] Made JSON website data file
-[ ] Make Nunjucks work
+- [x] Make Gulp work
+- [x] Made SCSS structure files
+- [ ] Make Nunjucks work
+- [ ] Made JSON website data file

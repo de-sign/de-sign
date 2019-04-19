@@ -19,15 +19,15 @@ module.exports = function(config){
         },
         
         html: () => {
-            return gulp.src(config.paths.src.html + '/' + config.files.html)
+            return gulp.src(config.paths.src.html + '/' + config.files.src.html)
                 .pipe(gulp.dest(config.paths.dest.html));
         },
 
         js: () => {
-            return gulp.src(config.paths.src.js + '/' + config.files.js)
+            return gulp.src(config.paths.src.js + '/' + config.files.src.js)
                 .pipe(plumber())
                 .pipe(sourcemaps.init())
-                .pipe(concat('main.js'))
+                .pipe(concat(config.files.dest.js))
                 .pipe(uglify())
                 .pipe(sourcemaps.write())
                 .pipe(plumber.stop())
@@ -35,11 +35,11 @@ module.exports = function(config){
         },
         
         scss: () => {
-            return gulp.src(config.paths.src.scss + '/main.scss')
+            return gulp.src(config.paths.src.scss + '/' + config.files.src.scss)
                 .pipe(plumber())
                 .pipe(sourcemaps.init())
                 .pipe(sass())
-                .pipe(rename('main.css'))
+                .pipe(rename(config.files.dest.scss))
                 .pipe(cleanCss())
                 .pipe(sourcemaps.write())
                 .pipe(plumber.stop())
@@ -47,7 +47,7 @@ module.exports = function(config){
         },
         
         images: () => {
-            return gulp.src(config.paths.src.images + '/' + config.files.images)
+            return gulp.src(config.paths.src.images + '/' + config.files.src.images)
                 .pipe(
                     imagemin([
                         imagemin.gifsicle({ interlaced: true }),
@@ -68,7 +68,7 @@ module.exports = function(config){
         },
         
         fonts: () => {
-            return gulp.src(config.paths.src.fonts + '/' + config.files.fonts)
+            return gulp.src(config.paths.src.fonts + '/' + config.files.src.fonts)
                 .pipe(gulp.dest(config.paths.dest.fonts));
         }
     };
