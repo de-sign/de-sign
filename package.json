@@ -1,6 +1,6 @@
 {
   "name": "uikit-starter",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Simple uikit website starter pack",
   "repository": {
     "type": "git",
@@ -12,6 +12,11 @@
     "url": "https://github.com/de-sign/uikit-starter/issues"
   },
   "homepage": "https://github.com/de-sign/uikit-starter#readme",
+  "scripts": {
+    "US-dev": "SET NODE_ENV=development; gulp",
+    "US-test": "SET NODE_ENV=testing; gulp",
+    "US-prod": "SET NODE_ENV=production; gulp"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^4.1.0",

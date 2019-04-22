@@ -1,9 +1,11 @@
+const imagemin = require('gulp-imagemin')
+
 // Data
-let env = 'dev',
+let env = process.env.NODE_ENV || 'development',
     out = {
-        dev: 'build',
-        test: 'test',
-        prod: 'dist'
+        development: 'build',
+        testing: 'test',
+        production: 'dist'
     },
     src = {
         root: 'src',
@@ -18,9 +20,9 @@ let env = 'dev',
 Object.assign(exports, {
     env: {
         current: env,
-        isDev: env == 'dev',
-        isTest: env == 'test',
-        isProd: env == 'prod'
+        isDevelopment: env == 'development',
+        isTesting: env == 'testing',
+        isProduction: env == 'production'
     },
 
     paths: {
@@ -65,6 +67,38 @@ Object.assign(exports, {
     },
 
     plugins: {
-        
+        plumber: undefined,
+        sourcemaps: {
+            js: {
+                init: undefined,
+                write: undefined
+            },
+            css: {
+                init: undefined,
+                write: undefined
+            }
+        },
+        beautify: {
+            js: undefined,
+            html: undefined,
+            css: undefined
+        },
+        uglify: undefined,
+        sass: undefined,
+        cleanCss: undefined,
+        imagemin: [
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.jpegtran({ progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: false },
+                    { removeComments: true },
+                    { removeHiddenElems: true },
+                    { removeDimensions: true },
+                    { cleanupIDs: true }
+                ]
+            })
+        ]
     }
 });

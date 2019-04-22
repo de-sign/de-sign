@@ -16,7 +16,12 @@ module.exports = function(config, _builds){
         
         watch: (done) => {
             for( let task in config.files.watch){
-                gulp.watch(config.paths.src[task] + '/' + config.files.watch[task], gulp.series(_builds[task]));
+                gulp.watch(
+                    Array.isArray(config.files.watch[task]) ?
+                        config.files.watch[task].map( file => config.paths.src[task] + '/' + file ) :
+                        config.paths.src[task] + '/' + config.files.watch[task],
+                    gulp.series(_builds[task])
+                );
             };
             done();
         }

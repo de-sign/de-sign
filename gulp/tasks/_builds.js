@@ -18,7 +18,7 @@ const imagemin      = require('gulp-imagemin');
 
 // Export
 module.exports = function(config){
-
+    
     const _builds = {
         clean: () => {
             return del([config.paths.dest.root], { force: true });
@@ -26,7 +26,7 @@ module.exports = function(config){
         
         html: () => {
             return gulp.src(config.paths.src.html + '/' + config.files.src.html)
-                .pipe(plumber())
+                .pipe(plumber(config.plugins.plumber))
                 .pipe(data((file) => {
                     return {
                         US: JSON.parse(
@@ -41,45 +41,30 @@ module.exports = function(config){
 
         js: () => {
             return gulp.src(config.paths.src.js + '/' + config.files.src.js)
-                .pipe(plumber())
-                .pipe(gulpif(!config.env.isProd, sourcemaps.init()))
+                .pipe(plumber(config.plugins.plumber))
+                .pipe(gulpif(config.env.isDevelopment, sourcemaps.init(config.plugins.sourcemaps.js.init)))
                 .pipe(concat(config.files.dest.js))
-                .pipe(gulpif(config.env.isProd, uglify(), beautify.js()))
-                .pipe(gulpif(!config.env.isProd, sourcemaps.write()))
+                .pipe(gulpif(config.env.isDevelopment, beautify.js(config.plugins.beautify.js), uglify(config.plugins.uglify)))
+                .pipe(gulpif(config.env.isDevelopment, sourcemaps.write(config.plugins.sourcemaps.js.write)))
                 .pipe(plumber.stop())
                 .pipe(gulp.dest(config.paths.dest.js));
         },
         
         scss: () => {
             return gulp.src(config.paths.src.scss + '/' + config.files.src.scss)
-                .pipe(plumber())
-                .pipe(gulpif(!config.env.isProd, sourcemaps.init()))
+                .pipe(plumber(config.plugins.plumber))
+                .pipe(gulpif(config.env.isDevelopment, sourcemaps.init(config.plugins.sourcemaps.css.init)))
                 .pipe(sass())
                 .pipe(rename(config.files.dest.scss))
-                .pipe(gulpif(config.env.isProd, cleanCss(), beautify.css()))
-                .pipe(gulpif(!config.env.isProd, sourcemaps.write()))
+                .pipe(gulpif(config.env.isDevelopment, beautify.css(config.plugins.beautify.css), cleanCss(config.plugins.cleanCss)))
+                .pipe(gulpif(config.env.isDevelopment, sourcemaps.write(config.plugins.sourcemaps.css.write)))
                 .pipe(plumber.stop())
                 .pipe(gulp.dest(config.paths.dest.scss));
         },
         
         images: () => {
             return gulp.src(config.paths.src.images + '/' + config.files.src.images)
-                .pipe(
-                    imagemin([
-                        imagemin.gifsicle({ interlaced: true }),
-                        imagemin.jpegtran({ progressive: true }),
-                        imagemin.optipng({ optimizationLevel: 5 }),
-                        imagemin.svgo({
-                            plugins: [
-                                { removeViewBox: false },
-                                { removeComments: true },
-                                { removeHiddenElems: true },
-                                { removeDimensions: true },
-                                { cleanupIDs: true }
-                            ]
-                        })
-                    ])
-                )
+                .pipe(imagemin(config.plugins.imagemin))
                 .pipe(gulp.dest(config.paths.dest.images));
         },
         
