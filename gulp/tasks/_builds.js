@@ -1,6 +1,6 @@
 // Require
 const gulp          = require('gulp');
-const _merge        = require('lodash.merge');
+const merge         = require('lodash.merge');
 const del           = require('del');
 const plumber       = require('gulp-plumber');
 const data          = require('gulp-data');
@@ -17,12 +17,10 @@ const rename        = require('gulp-rename');
 const cleanCss      = require('gulp-clean-css');
 const imagemin      = require('gulp-imagemin');
 
-function US_getData(file){
+function _getData(file){
     let US = JSON.parse(fs.readFileSync('src/data/base.json')),
         f_path = 'src/data/' + path.basename(file.path, '.html') + '.json';
-
-    fs.existsSync(f_path) && _merge(US, JSON.parse(fs.readFileSync(f_path)));
-    
+    fs.existsSync(f_path) && merge(US, JSON.parse(fs.readFileSync(f_path)));
     return { US };
 };
 
@@ -37,7 +35,7 @@ module.exports = function(config){
         html: () => {
             return gulp.src(config.paths.src.html + '/' + config.files.src.html)
                 .pipe(plumber(config.plugins.plumber))
-                .pipe(data(US_getData))
+                .pipe(data(_getData))
                 .pipe(nunjucks.compile())
                 .pipe(plumber.stop())
                 .pipe(gulp.dest(config.paths.dest.html));

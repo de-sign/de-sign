@@ -18,6 +18,7 @@ let env = process.env.NODE_ENV || 'development',
 
 // Export
 Object.assign(exports, {
+    
     env: {
         current: env,
         isDevelopment: env == 'development',
