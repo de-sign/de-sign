@@ -1,15 +1,28 @@
 // Data
-let src = {
+let env = 'dev',
+    out = {
+        dev: 'build',
+        test: 'test',
+        prod: 'dist'
+    },
+    src = {
         root: 'src',
         assets: 'src/assets'
     },
     dest = {
-        root: 'build',
-        assets: 'build/assets'
+        root: `${out[env]}`,
+        assets: `${out[env]}/assets`
     };
 
 // Export
 Object.assign(exports, {
+    env: {
+        current: env,
+        isDev: env == 'dev',
+        isTest: env == 'test',
+        isProd: env == 'prod'
+    },
+
     paths: {
         src: Object.assign(src, {
             html: `${src.root}`,
@@ -49,5 +62,9 @@ Object.assign(exports, {
             js: 'main.js',
             scss: 'main.css'
         }
+    },
+
+    plugins: {
+        
     }
 });

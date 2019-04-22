@@ -2,5 +2,6 @@
 
 - [x] Make Gulp work
 - [x] Made SCSS structure files
-- [ ] Make Nunjucks work
-- [ ] Made JSON website data file
+- [x] Make Nunjucks work
+- [x] Made JSON website data file
+- [ ] Make Template components
