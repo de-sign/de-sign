@@ -1,16 +1,9 @@
 {
-    "doctype": "html",
-    "lang": "fr",
-    "charset": "UTF8",
     "url": {
-        "host": "localhost:3000",
         "path": "index.html"
     },
 	"meta": {
-		"title": "UIKit Starter",
-		"description": "Simple uikit website starter pack",
-		"viewport": "width=device-width, initial-scale=1.0"
-    },
-    "stylesheet": ["main"],
-    "script": []
+		"title": "UIKit Starter - Hello World",
+		"description": "Hello World !"
+    }
 }

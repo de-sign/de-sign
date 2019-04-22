@@ -7,10 +7,7 @@ module.exports = function(config, _builds){
 
     const _serves = {
         browserSync: (done) => {
-            browserSync.init({
-                server: config.paths.dest.root,
-                watch: true
-            });
+            browserSync.init(config.plugins.browserSync);
             done();
         },
         

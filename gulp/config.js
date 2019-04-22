@@ -67,6 +67,10 @@ Object.assign(exports, {
     },
 
     plugins: {
+        browserSync: {
+            server: dest.root,
+            watch: true
+        },
         plumber: undefined,
         sourcemaps: {
             js: {
