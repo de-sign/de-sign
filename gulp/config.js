@@ -1,4 +1,4 @@
-const imagemin = require('gulp-imagemin')
+const imagemin = require('gulp-imagemin');
 
 // Data
 let env = process.env.NODE_ENV || 'development',
