@@ -1,0 +1,8 @@
+@mixin hook-button(){
+    border-radius: 50px;
+    border: 2px solid $global-emphasis-color;
+}
+
+@mixin hook-button-default-hover(){
+    border-color: darken($global-emphasis-color, 5%);
+}

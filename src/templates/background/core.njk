@@ -1,0 +1,17 @@
+<!doctype {{US.doctype}}>
+<html lang="{{US.lang}}">
+	<head>
+		//=include _head.njk
+	</head>
+	<body>
+		{% block header %}
+			//=include _header.njk
+		{% endblock %}
+		{% block main %}
+			//=include main/_main.njk
+		{% endblock %}
+		{% block footer %}
+			//=include _footer.njk
+		{% endblock %}
+	</body>
+</html>
