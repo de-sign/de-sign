@@ -3,6 +3,7 @@ const gulp          = require('gulp');
 const merge         = require('lodash.merge');
 const del           = require('del');
 const plumber       = require('gulp-plumber');
+const include       = require('gulp-include');
 const data          = require('gulp-data');
 const fs            = require('fs');
 const path          = require('path');
@@ -32,11 +33,24 @@ module.exports = function(config){
             return del([config.paths.dest.root], { force: true });
         },
         
+        njk: () => {
+            return gulp.src(config.paths.src.njk + '/' + config.files.src.njk)
+                .pipe(plumber(config.plugins.plumber))
+                .pipe(include(config.plugins.include))
+                .pipe(rename(file => {
+                    file.basename = file.dirname.split('/').pop();
+                    file.dirname = '';
+                }))
+                .pipe(plumber.stop())
+                .pipe(gulp.dest(config.paths.dest.njk));
+        },
+        
         html: () => {
             return gulp.src(config.paths.src.html + '/' + config.files.src.html)
                 .pipe(plumber(config.plugins.plumber))
                 .pipe(data(_getData))
                 .pipe(nunjucks.compile())
+                .pipe(gulpif(config.env.isDevelopment, beautify.html(config.plugins.beautify.html)))
                 .pipe(plumber.stop())
                 .pipe(gulp.dest(config.paths.dest.html));
         },
@@ -77,10 +91,11 @@ module.exports = function(config){
     };
 
     Object.assign(_builds, {
-        scripts: gulp.parallel(_builds.html, _builds.js),
+        templates: gulp.series(_builds.njk, _builds.html),
+        scripts: gulp.parallel(_builds.js),
         styles: gulp.parallel(_builds.scss, _builds.images, _builds.fonts)
     });
-    _builds.global = gulp.series(_builds.clean, gulp.parallel(_builds.scripts, _builds.styles));
+    _builds.global = gulp.series(_builds.clean, gulp.parallel(_builds.templates, _builds.scripts, _builds.styles));
 
     return _builds;
 };

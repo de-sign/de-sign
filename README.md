@@ -4,7 +4,10 @@
 - [x] Made SCSS structure files
 - [x] Make Nunjucks work
 - [x] Made JSON website data file
-- [ ] Make Template components
+- [x] Make template components
+- [~] Make example
+- [ ] Make experiment projects
+- [ ] Make documentation
 
 # UIKit variables helper
 
@@ -1252,5 +1255,3 @@
 1027 - __width-large-width__ : 450px<br/>
 1028 - __width-xlarge-width__ : 600px<br/>
 1029 - __width-xxlarge-width__ : 750px<br/>
-
-# Dependencies

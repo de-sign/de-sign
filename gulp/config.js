@@ -9,7 +9,8 @@ let env = process.env.NODE_ENV || 'development',
     },
     src = {
         root: 'src',
-        assets: 'src/assets'
+        assets: 'src/assets',
+        templates: 'src/templates'
     },
     dest = {
         root: `${out[env]}`,
@@ -29,6 +30,7 @@ Object.assign(exports, {
     paths: {
         src: Object.assign(src, {
             html: `${src.root}`,
+            njk: `${src.templates}`,
             scss: `${src.assets}/scss`,
             js: `${src.assets}/js`,
             images: `${src.assets}/images`,
@@ -36,6 +38,7 @@ Object.assign(exports, {
         }),
         dest: Object.assign(dest, {
             html: `${dest.root}`,
+            njk: `${src.templates}`,
             scss: `${dest.assets}/css`,
             js: `${dest.assets}/js`,
             images: `${dest.assets}/images`,
@@ -45,6 +48,7 @@ Object.assign(exports, {
 
     files: {
         watch: {
+            templates: '*/**/*.njk',
             html: [
                 '**/*.html',
                 '**/*.json'
@@ -55,6 +59,7 @@ Object.assign(exports, {
             fonts: '**/*.*'
         },
         src: {
+            njk: '**/core.njk',
             html: '*.html',
             scss: 'main.scss',
             js: '**/*.js',
@@ -73,6 +78,7 @@ Object.assign(exports, {
             watch: true
         },
         plumber: undefined,
+        include: undefined,
         sourcemaps: {
             js: {
                 init: undefined,

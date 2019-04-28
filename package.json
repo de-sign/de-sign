@@ -29,6 +29,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
+    "gulp-include": "^2.4.1",
     "gulp-nunjucks": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",

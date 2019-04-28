@@ -5,5 +5,24 @@
 	"meta": {
 		"title": "UIKit Starter - Hello World",
 		"description": "Hello World !"
+    },
+
+    "NJK": {
+        "class": "uk-background-cover",
+        "image": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg",
+        "title": "Background template",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus fugit distinctio qui voluptatibus impedit recusandae fugiat quibusdam expedita voluptates esse, blanditiis, ea, at numquam laudantium iusto molestias alias ipsa!",
+        "buttons": [
+            {
+                "label": "Default",
+                "href": "#",
+                "class": "uk-button-default uk-margin-small-right"
+            },
+            {
+                "label": "Call to action",
+                "href": "#",
+                "class": "uk-button-primary"
+            }
+        ]
     }
 }

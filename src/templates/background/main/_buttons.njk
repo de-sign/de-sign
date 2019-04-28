@@ -1,0 +1,5 @@
+{% if US.NJK.buttons %}
+    {% for b_button in US.NJK.buttons %}
+        <a href="{{ b_button.href }}" class="uk-button {{ b_button.class }}">{{ b_button.label }}</a>
+    {% endfor %}
+{% endif %}

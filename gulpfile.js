@@ -10,6 +10,7 @@ const _serves       = require('./gulp/tasks/_serves')(config, _builds);
 Object.assign(exports, {
     default: gulp.series(_builds.global, _serves.global),
     build: _builds.global,
+    templates: _builds.templates,
     scripts: _builds.scripts,
     styles: _builds.styles,
     clean: _builds.clean
