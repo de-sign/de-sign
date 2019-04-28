@@ -1,0 +1,14 @@
+$global-emphasis-color: #413249;
+$global-color: #333;
+$global-background: #fff;
+$global-font-family: 'Raleway', sans-serif;
+$global-font-size: 18px;
+
+$base-body-font-weight: bold;
+$base-heading-font-family: 'Permanent Marker', cursive;
+
+$button-default-background: transparent;
+$button-default-hover-color: darken($global-emphasis-color, 5%);
+$button-primary-background: $global-emphasis-color;
+
+$overlay-default-background: rgba($global-background, 0.4);

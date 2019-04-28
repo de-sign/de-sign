@@ -1,6 +1,6 @@
 {
     "url": {
-        "path": "index.html"
+        "path": "uikit-starter.html"
     },
 	"meta": {
 		"title": "UIKit Starter - Hello World",
@@ -8,20 +8,31 @@
     },
 
     "NJK": {
-        "class": "uk-background-cover",
-        "image": "https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg",
-        "title": "Background template",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus fugit distinctio qui voluptatibus impedit recusandae fugiat quibusdam expedita voluptates esse, blanditiis, ea, at numquam laudantium iusto molestias alias ipsa!",
+        "section": "uk-background-cover uk-dark",
+        "image": "https://vignette.wikia.nocookie.net/shinsekaiyori/images/5/50/Wiki-background/revision/latest?cb=20140430234004",
+        "overlay": "uk-overlay-default uk-position-cover",
+
+        "icon": "icon: uikit; ratio: 6",
+        "title": "UIKit Starter",
+        "subtitle": "Simple uikit website starter pack",
+        "text": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus fugit distinctio qui voluptatibus impedit recusandae fugiat quibusdam expedita voluptates esse, blanditiis, ea, at numquam laudantium iusto molestias alias ipsa!",
         "buttons": [
             {
-                "label": "Default",
-                "href": "#",
-                "class": "uk-button-default uk-margin-small-right"
+                "label": "How to use",
+                "attributes": {
+                    "href": "#modal-doc",
+                    "class": "uk-button uk-button-default uk-margin-small-right uk-width-2-3 uk-width-auto@s",
+                    "uk-toggle": ""
+                }
             },
             {
-                "label": "Call to action",
-                "href": "#",
-                "class": "uk-button-primary"
+                "label": "<span uk-icon=\"icon: github\"></span> Github",
+                "attributes": {
+                    "href": "https://github.com/de-sign/uikit-starter",
+                    "class": "uk-button uk-button-primary uk-margin-small uk-width-2-3 uk-width-auto@s",
+                    "target": "_blank",
+                    "rel": "noreferrer noopener"
+                }
             }
         ]
     }

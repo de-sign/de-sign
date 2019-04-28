@@ -1,2 +1,24 @@
 <!-- Extension du Layout --> 
 {% extends 'templates/background.njk' %}
+
+{% block main_overlay %}
+    {{ super() }}
+    <section id="modal-doc" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-text-center">
+            <header>
+                <div class="uk-h1 uk-modal-title uk-margin-remove">UIKit starter</div>
+                <div class="uk-h5 uk-margin-remove">How to use</div>
+            </header>
+            <p class="uk-margin-medium-bottom">
+                The documentation is being created.<br/>
+                More information on GitHub.
+            </p>
+            <footer>
+                <button class="uk-button uk-button-default uk-modal-close uk-margin-small-right uk-width-2-3 uk-width-auto@s" type="button">Ok</button>
+                <a href="https://github.com/de-sign/uikit-starter" class="uk-button uk-button-primary uk-margin-small uk-width-2-3 uk-width-auto@s" target="_blank" rel="noreferrer noopener" >
+                    <span uk-icon="icon: github"></span> Github
+                </a>
+            </footer>
+        </div>
+    </section>
+{% endblock %}

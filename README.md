@@ -5,7 +5,7 @@
 - [x] Make Nunjucks work
 - [x] Made JSON website data file
 - [x] Make template components
-- [~] Make example
+- [x] Make example
 - [ ] Make experiment projects
 - [ ] Make documentation
 
