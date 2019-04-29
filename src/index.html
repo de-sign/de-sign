@@ -1,8 +1,10 @@
 <!-- Extension du Layout --> 
 {% extends 'templates/background.njk' %}
 
-{% block main_overlay %}
-    {{ super() }}
+{% block header %}{% endblock %}
+
+{% block main_content %}
+    <div class="uk-overlay uk-overlay-default uk-position-cover"></div>
     <section id="modal-doc" uk-modal>
         <div class="uk-modal-dialog uk-modal-body uk-text-center">
             <header>
@@ -21,4 +23,5 @@
             </footer>
         </div>
     </section>
+    {{ super() }}
 {% endblock %}

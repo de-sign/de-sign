@@ -1,37 +1,35 @@
-<main
-    class="uk-section uk-padding-remove {{ US.NJK.section }}"
-    {% if US.NJK.image %}
-        data-src="{{ US.NJK.image }}" uk-img
-    {% endif %}
->
-    {% block main_overlay %}
-        <div class="uk-overlay {{ US.NJK.overlay }}"></div>
+<main class="us-main uk-section uk-padding-remove {{ US.NJK.section }}" >
+    {% block main_content %}
+        <section class="uk-container uk-padding uk-flex uk-flex-center uk-height-viewport uk-position-relative">
+            <div class="uk-margin-auto-vertical uk-text-center">
+                <header uk-scrollspy="cls: uk-animation-slide-bottom-medium">
+                    {% block main_icon %}
+                        {% if US.NJK.icon %}
+                            <div class="uk-text-emphasis" uk-icon="{{ US.NJK.icon }}"></div>
+                        {% endif %}
+                    {% endblock %}
+                    {% block main_title %}
+                        <h1 class="uk-heading-medium uk-margin-remove-bottom uk-margin-small-top">{{ US.NJK.title }}</h1>
+                    {% endblock %}
+                    {% block main_subtitle %}
+                        {% if US.NJK.subtitle %}
+                            <h2 class="uk-h4 uk-margin-remove">{{ US.NJK.subtitle }}</h2>
+                        {% endif %}
+                    {% endblock %}
+                </header>
+                <div uk-scrollspy="cls: uk-animation-slide-bottom-small; delay: 500" class="uk-margin-medium">
+                    {% block main_text %}
+                        {% if US.NJK.text %}
+                            <p>{{ US.NJK.text | safe }}</p>
+                        {% endif %}
+                    {% endblock %}
+                </div>
+                <footer uk-scrollspy="cls: uk-animation-fade; delay: 1000">
+                    {% block main_buttons %}
+                        //=include _buttons.njk
+                    {% endblock %}
+                </footer>
+            </div>
+        </section>
     {% endblock %}
-    <section class="uk-container uk-padding uk-flex uk-flex-center uk-height-viewport uk-position-relative">
-        <div class="uk-margin-auto-vertical uk-text-center">
-            <header>
-                {% block main_icon %}
-                    {% if US.NJK.icon %}
-                        <div class="uk-text-emphasis" uk-icon="{{ US.NJK.icon }}"></div>
-                    {% endif %}
-                {% endblock %}
-                {% block main_title %}
-                    <h1 class="uk-heading-medium uk-margin-remove-bottom uk-margin-small-top">{{ US.NJK.title }}</h1>
-                {% endblock %}
-                {% block main_subtitle %}
-                    {% if US.NJK.subtitle %}
-                        <h2 class="uk-h4 uk-margin-remove">{{ US.NJK.subtitle }}</h2>
-                    {% endif %}
-                {% endblock %}
-            </header>
-            {% block main_text %}
-                <p class="uk-margin-medium">{{ US.NJK.text | safe }}</p>
-            {% endblock %}
-            <footer>
-                {% block main_buttons %}
-                    //=include _buttons.njk
-                {% endblock %}
-            </footer>
-        </div>
-    </section>
 </main>
