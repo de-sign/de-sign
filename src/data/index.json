@@ -9,8 +9,7 @@
 
     "NJK": {
         "section": "uk-background-cover uk-dark",
-        "image": "https://vignette.wikia.nocookie.net/shinsekaiyori/images/5/50/Wiki-background/revision/latest?cb=20140430234004",
-        "overlay": "uk-overlay-default uk-position-cover",
+        "image": "assets/images/background.jpg",
 
         "icon": "icon: uikit; ratio: 6",
         "title": "UIKit Starter",
