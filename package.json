@@ -13,9 +13,9 @@
     },
     "homepage": "https://github.com/de-sign/uikit-starter#readme",
     "scripts": {
-        "US-dev": "SET NODE_ENV=development&& gulp build",
-        "US-test": "SET NODE_ENV=testing&& gulp build",
-        "US-prod": "SET NODE_ENV=production&& gulp build"
+        "US-dev": "NODE_ENV=development gulp build",
+        "US-test": "NODE_ENV=testing gulp build",
+        "US-prod": "NODE_ENV=production gulp build"
     },
     "devDependencies": {
         "browser-sync": "^2.26.3",
