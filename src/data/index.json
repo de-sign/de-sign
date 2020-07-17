@@ -1,38 +1,25 @@
 {
     "url": {
-        "path": "uikit-starter.html"
+        "path": ""
     },
 	"meta": {
-		"title": "UIKit Starter - Hello World",
-		"description": "Hello World !"
+        "title": "Jérémy OUDOT - Concepteur, designer et développeur WEB",
+        "description": "Après l'obtention de mon BTS IRIS, j'ai progressé en autodidacte sur le développement lié au Web. C'est à ce moment précis que j'ai compris que je voulais en faire mon métier.",
+		"author": "Jérémy OUDOT",
+        "viewport": "width=device-width, initial-scale=1.0",
+        "theme-color": "#f7f7f7"
     },
+    "socialMedia": {
+        "og:image": "https://de-sign.github.io/assets/images/meta.jpg",
 
-    "NJK": {
-        "section": "uk-background-cover uk-dark",
-        "image": "assets/images/background.jpg",
-
-        "icon": "icon: uikit; ratio: 6",
-        "title": "UIKit Starter",
-        "subtitle": "Simple uikit website starter pack",
-        "text": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus fugit distinctio qui voluptatibus impedit recusandae fugiat quibusdam expedita voluptates esse, blanditiis, ea, at numquam laudantium iusto molestias alias ipsa!",
-        "buttons": [
-            {
-                "label": "How to use",
-                "attributes": {
-                    "href": "#modal-doc",
-                    "class": "uk-button uk-button-default uk-margin-small-right uk-width-2-3 uk-width-auto@s",
-                    "uk-toggle": ""
-                }
-            },
-            {
-                "label": "<span uk-icon=\"icon: github\"></span> Github",
-                "attributes": {
-                    "href": "https://github.com/de-sign/uikit-starter",
-                    "class": "uk-button uk-button-primary uk-margin-small uk-width-2-3 uk-width-auto@s",
-                    "target": "_blank",
-                    "rel": "noreferrer noopener"
-                }
-            }
-        ]
+        "og:type": "website",
+        "og:url": "https://de-sign.github.io/",
+        "og:title": "Jérémy OUDOT - Concepteur, designer et développeur WEB",
+        "og:description": "Après l'obtention de mon BTS IRIS, j'ai progressé en autodidacte sur le développement lié au Web. C'est à ce moment précis que j'ai compris que je voulais en faire mon métier.",
+        
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://de-sign.github.io/",
+        "twitter:title": "Jérémy OUDOT - Concepteur, designer et développeur WEB",
+        "twitter:description": "Après l'obtention de mon BTS IRIS, j'ai progressé en autodidacte sur le développement lié au Web. C'est à ce moment précis que j'ai compris que je voulais en faire mon métier."
     }
 }

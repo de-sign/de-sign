@@ -12,5 +12,8 @@
 		"viewport": "width=device-width, initial-scale=1.0"
     },
     "stylesheet": ["main"],
-    "script": []
+    "script": [
+        "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"
+    ]
 }

@@ -1,17 +1,17 @@
 {
-    "name": "uikit-starter",
+    "name": "de-sign",
     "version": "0.11.0",
     "description": "Simple uikit website starter pack",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/de-sign/uikit-starter.git"
+        "url": "git+https://github.com/de-sign/de-sign.git"
     },
     "author": "Jérémy OUDOT",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/de-sign/uikit-starter/issues"
+        "url": "https://github.com/de-sign/de-sign/issues"
     },
-    "homepage": "https://github.com/de-sign/uikit-starter#readme",
+    "homepage": "https://github.com/de-sign/de-sign#readme",
     "scripts": {
         "US-dev": "NODE_ENV=development gulp build",
         "US-test": "NODE_ENV=testing gulp build",

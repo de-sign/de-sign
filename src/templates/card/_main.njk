@@ -1,0 +1,32 @@
+<main class="us-main uk-margin-auto uk-flex uk-height-1-1">
+	<div class="us-card uk-flex-1 uk-margin-auto-vertical">
+		<div class="us-card-row">
+			<div class="us-card-face us-card-face--front">
+				{% block card_face_1 %}{% endblock %}
+			</div>
+			<div class="us-card-face us-card-face--back">
+				{% block card_face_3 %}{% endblock %}
+			</div>
+		</div>
+		<div class="us-card-pivot us-card-pivot--first">
+			<div class="us-card-row">
+				<div class="us-card-face us-card-face--front us-card-face--inverse">
+					{% block card_face_2 %}{% endblock %}
+				</div>
+				<div class="us-card-face us-card-face--back">
+					{% block card_face_4 %}{% endblock %}
+				</div>
+			</div>
+			<div class="us-card-pivot us-card-pivot--last">
+				<div class="us-card-row">
+					<div class="us-card-face us-card-face--front">
+						{% block card_face_6 %}{% endblock %}
+					</div>
+					<div class="us-card-face us-card-face--back">
+						{% block card_face_5 %}{% endblock %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
