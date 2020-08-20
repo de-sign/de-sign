@@ -21,5 +21,11 @@
         "twitter:url": "https://de-sign.github.io/",
         "twitter:title": "Jérémy OUDOT - Concepteur, designer et développeur WEB",
         "twitter:description": "Après l'obtention de mon BTS IRIS, j'ai progressé en autodidacte sur le développement lié au Web. C'est à ce moment précis que j'ai compris que je voulais en faire mon métier."
-    }
+    },
+    "sections": [
+        "pages/01-home.html",
+        "pages/02-evolutions.html",
+        "pages/03-capacities.html",
+        "pages/04-contact.html"
+    ]
 }

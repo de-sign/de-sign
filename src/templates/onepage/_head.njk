@@ -1,0 +1,40 @@
+{% set url_checker = r/^https?:\/\//i %}
+
+<!-- Balise meta -->
+<meta charset="{{US.charset}}">
+<link rel="canonical" href="{{US.url.host}}/{{US.url.path}}" />
+
+{% if US.meta %}
+	<title>{{US.meta.title}}</title>
+	{% for m_name, m_content in US.meta %}
+		<meta name="{{m_name}}" content="{{m_content}}">
+	{% endfor %}
+{% endif %}
+
+{% if US.socialMedia %}
+	{% for m_property, m_content in US.socialMedia %}
+		<meta property="{{m_property}}" content="{{m_content}}">
+	{% endfor %}
+{% endif %}
+
+<!-- CSS -->
+{% if US.stylesheet %}
+	{% for s_file in US.stylesheet %}
+		{% if url_checker.test(s_file) %}
+			<link rel="stylesheet" href="{{s_file}}" />
+		{% else %}
+			<link rel="stylesheet" href="assets/css/{{s_file}}.css" />
+		{% endif %}
+	{% endfor %}
+{% endif %}
+
+<!-- JS -->
+{% if US.script %}
+	{% for s_file in US.script %}
+		{% if url_checker.test(s_file) %}
+			<script src="{{s_file}}"></script>
+		{% else %}
+			<script src="assets/js/{{s_file}}.js"></script>
+		{% endif %}
+	{% endfor %}
+{% endif %}

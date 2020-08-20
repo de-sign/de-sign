@@ -1,89 +1,15 @@
-.us-main {
-    max-width: $container-max-width;
-}
+$us-skew-angle: 30deg;
 
 .us-img {
-    max-height: 100%;
-}
-
-.us-page {
-    border: $global-border-width solid #999;
-    border-radius: $global-border-width * 2;
+	max-height: 100%;
 }
 
 .us-skew {
-    transform: skewX(-25deg);
+    transform: skewX(-$us-skew-angle);
+	overflow: hidden;
 }
 
 .us-unskew {
     display: block;
-    transform: skewX(25deg);
-}
-
-.us-card {
-	transform: rotate3d(0, 1, 0, 0);
-	position: relative;
-	transition: transform 1s ease, height 1s ease;
-    transform-style: preserve-3d;
-    height: $height-large-height + (2 * $section-padding-vertical-m) + (2 * $global-border-width);
-      
-    &-row {
-		position: relative;
-        height: $height-large-height + (2 * $section-padding-vertical-m) + (2 * $global-border-width);
-	}
-	
-	&-face {
-		height: 100%;
-		width: 100%;
-  		backface-visibility: hidden;
-        position: absolute;
-		
-		&--front {}
-		&--back {
-  			transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 0.5px);
-		}
-		&--inverse {
-			transform: rotate3d(0, 0, 1, -180deg) translate3d(0, 0, 0.5px);
-		}
-    }
-    
-    &-pivot {
-        height: $height-large-height + (2 * $section-padding-vertical-m) + (2 * $global-border-width);
-        transform-origin: top center;
-        transition: transform 1s ease, z-index 1s ease;
-        perspective: 600px;
-        transform-style: preserve-3d;
-        position: relative;
-    }
-}
-
-/* Faces Rules */
-.us-body[data-us-page="1"] .us-card,
-.us-body[data-us-page="2"] .us-card {
-	&-pivot--first {
-		transform: rotate3d(1, 0, 0, -180deg) translate3d(0, 0, 2px);
-	}
-	
-	&-pivot--last {
-		transform: rotate3d(1, 0, 0, -180deg) translate3d(0, 0, 1px);
-	}
-}
-
-.us-body[data-us-page="2"] .us-card {
-	transform: rotate3d(0, 1, 0, -180deg);
-}
-
-.us-body[data-us-page="3"] .us-card {
-	height: 450px;
-	transform: rotate3d(0, 1, 0, -180deg);
-}
-
-.us-body[data-us-page="4"] .us-card {
-	&-pivot--first {
-		transform: rotate3d(1, 0, 0, 180deg) translate3d(0, 0, -1px);
-	}
-	
-	&-pivot--last {
-		transform: rotate3d(1, 0, 0, -180deg) translate3d(0, 0, 1px);
-	}
+    transform: skewX($us-skew-angle);
 }
