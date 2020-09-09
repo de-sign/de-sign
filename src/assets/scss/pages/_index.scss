@@ -1,4 +1,9 @@
 $us-skew-angle: 30deg;
+$us-rotate-angle: 2deg;
+
+.us-page {
+    overflow: hidden;
+}
 
 .us-img {
 	max-height: 100%;
@@ -12,4 +17,33 @@ $us-skew-angle: 30deg;
 .us-unskew {
     display: block;
     transform: skewX($us-skew-angle);
+}
+
+.us-separator {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        bottom: -100%;
+        left: -250px;
+        right: -250px;
+        transform-origin: 0 0;
+        transform: rotate(0deg);
+        transition: transform 1s ease;
+    }
+    
+    &.us-separator-rotated::before {
+        transform: rotate(-$us-rotate-angle);
+    }
+
+    &.uk-section-primary::before {
+        background-color: $global-secondary-background;
+    }
+
+    &.uk-section-secondary::before {
+        background-color: $global-primary-background;
+    }
 }
