@@ -1,8 +1,10 @@
-@mixin hook-button(){
-    border-radius: 50px;
-    border: 2px solid $global-emphasis-color;
-}
+@mixin hook-grid-misc(){
 
-@mixin hook-button-default-hover(){
-    border-color: darken($global-emphasis-color, 5%);
+    /* Phone landscape and lower */
+    @media (max-width: $breakpoint-small-max) {
+        .uk-grid-divider.uk-grid-stack > .uk-grid-margin::before {
+            content: none;
+        }
+    }
+
 }

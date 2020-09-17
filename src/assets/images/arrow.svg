@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" width="64" height="64">
+    <defs>
+        <clipPath id="_clipPath_BZ8so4nqtfioNMvD7PLaDcT52kw2LZHC">
+            <rect width="64" height="64"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#_clipPath_BZ8so4nqtfioNMvD7PLaDcT52kw2LZHC)">
+        <path d="M 30.006 18.489 L 30.006 18.489 C 29.451 18.489 29 19.041 29 19.721 L 29 51.511 C 29 52.191 29.451 52.742 30.006 52.742 L 30.006 52.742 C 30.562 52.742 31.013 52.191 31.013 51.511 L 31.013 19.721 C 31.013 19.041 30.562 18.489 30.006 18.489 Z" style="stroke:none;fill:#FFFFFF;stroke-miterlimit:10;"/>
+        <path d="M 39.576 35.055 L 39.576 35.055 C 39.095 34.777 38.398 35.083 38.021 35.736 L 29.236 50.952 C 28.859 51.606 28.943 52.362 29.424 52.64 L 29.424 52.64 C 29.905 52.917 30.602 52.612 30.979 51.958 L 39.764 36.743 C 40.141 36.089 40.057 35.333 39.576 35.055 Z" style="stroke:none;fill:#FFFFFF;stroke-miterlimit:10;"/>
+        <path d="M 31.994 11.258 L 31.994 11.258 C 31.438 11.258 30.987 11.809 30.987 12.489 L 30.987 44.279 C 30.987 44.959 31.438 45.511 31.994 45.511 L 31.994 45.511 C 32.549 45.511 33 44.959 33 44.279 L 33 12.489 C 33 11.809 32.549 11.258 31.994 11.258 Z" style="stroke:none;fill:#222222;stroke-miterlimit:10;"/>
+        <path d="M 41.563 27.824 L 41.563 27.824 C 41.082 27.546 40.386 27.851 40.008 28.505 L 31.223 43.72 C 30.846 44.374 30.93 45.13 31.411 45.408 L 31.411 45.408 C 31.892 45.686 32.589 45.38 32.966 44.727 L 41.751 29.511 C 42.129 28.857 42.045 28.101 41.563 27.824 Z" style="stroke:none;fill:#222222;stroke-miterlimit:10;"/>
+    </g>
+</svg>
