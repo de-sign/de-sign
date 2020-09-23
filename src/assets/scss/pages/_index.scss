@@ -11,6 +11,19 @@ $us-rotate-angle: 2deg;
 
 .us-navigator {
     z-index: 1000;
+
+    &-top {
+        transform: rotate(180deg);
+    }
+
+    li {
+        display: none;
+
+        &.uk-active + li {
+            display: inherit;
+        }
+    }
+    
 }
 
 .us-skew {
